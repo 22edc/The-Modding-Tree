@@ -345,7 +345,7 @@ addLayer("f", {
             },
         },
         2: {
-            requirementDescription: "10000 game men",
+            requirementDescription: "10000 fruits",
             unlocked() { return hasMilestone("f", 1) },
             done() {return player[this.layer].best.gte(10000)}, // Used to determine when to give the milestone
             effectDescription: "auto buy the P buyables",
@@ -363,7 +363,7 @@ addLayer("f", {
             effectDisplay() { return format(this.effect())+"x" }, // Add formatting to the effect
         },
         12: {
-            description: "points get even bigg (also pp i guess)",
+            description: "points get even larger",
             cost: new Decimal(10),
             effect() { // Calculate bonuses from the upgrade. Can return a single value or an object with multiple values
                 let ret = player[this.layer].points.add(1).pow(player[this.layer].upgrades.includes(24)?1.1:(player[this.layer].upgrades.includes(14)?0.75:0.5)) 
@@ -373,14 +373,14 @@ addLayer("f", {
             effectDisplay() { return format(this.effect())+"x" }, // Add formatting to the effect
         },
         13: {
-            description: "boner pill best pill!",
+            description: "magicly increased prestige points",
             cost: new Decimal(6900),
             effect() { return (42)
             },
             effectDisplay() { return format(this.effect())+"x" }, // Add formatting to the effect
         },
         14: {
-            description: "a second pill multiplies points, pp, and gamer bucks earnings!! noice!!",
+            description: "a second pill multiplies points, pprestige points, and gamer bucks earnings!! noice!!",
             cost: new Decimal(42000),
             effect() { return (6.9)
             },
@@ -463,14 +463,14 @@ addLayer("r", {
             effectDisplay() { return format(this.effect())+"x" }, // Add formatting to the effect
         },
         13: {
-            description: "boner pill",
+            description: "Blank Upgrade",
             cost: new Decimal(69),
             effect() { return (42)
             },
             effectDisplay() { return format(this.effect())+"x" }, // Add formatting to the effect
         },
         11: {
-            description: "a second pill",
+            description: "a second blank upgrade",
             cost: new Decimal(1),
             effect() { return (6.9)
             },
